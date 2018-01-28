@@ -9,7 +9,7 @@ env:
 - securityId=04tf4000001I1D7AAK
 before_install:
 # delete the following line before encrypting your server.key
-- openssl aes-256-cbc -K $encrypted_334346ef1ebe_key -iv $encrypted_334346ef1ebe_iv -in server.key.enc -out assets/server.key -d
+- openssl aes-256-cbc -K $encrypted_334346ef1ebe_key -iv $encrypted_334346ef1ebe_iv -in assets/server.key.enc -out assets/server.key -d
 - export SFDX_AUTOUPDATE_DISABLE=true
 - export SFDX_USE_GENERIC_UNIX_KEYCHAIN=true
 - export SFDX_DOMAIN_RETRY=300
