@@ -29,12 +29,12 @@ script:
 - sfdx force:org:delete -u ciorg -p
 # Push packages to scratch org
 - sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a pkgInstallOrg
-- sfdx force:package:install -i $coreID -w 30 -u pkgInstallOrg
-- sfdx force:package:install -i $logicID -w 30 -u pkgInstallOrg
-- sfdx force:package:install -i $uiID -w 30 -u pkgInstallOrg
-- sfdx force:package:install -i $securityID -w 30 -u pkgInstallOrg
+- sfdx force:package:install -w 30 -u pkgInstallOrg -i $coreID
+- sfdx force:package:install -w 30 -u pkgInstallOrg -i $logicID
+- sfdx force:package:install -w 30 -u pkgInstallOrg -i $uiID
+- sfdx force:package:install -w 30 -u pkgInstallOrg -i $securityID
 # Push packages to Sandbox
-- sfdx force:package:install -i $coreID -w 30 -u $SBOXUSERNAME
-- sfdx force:package:install -i $logicID -w 30 -u $SBOXUSERNAME
-- sfdx force:package:install -i $uiID -w 30 -u $SBOXUSERNAME
-- sfdx force:package:install -i $securityID -w 30 -u $SBOXUSERNAME
+- sfdx force:package:install -w 30 -u $SBOXUSERNAME -i $coreID
+- sfdx force:package:install -w 30 -u $SBOXUSERNAME -i $logicID
+- sfdx force:package:install -w 30 -u $SBOXUSERNAME -i $uiID
+- sfdx force:package:install -w 30 -u $SBOXUSERNAME -i $securityID
