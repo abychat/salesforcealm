@@ -25,7 +25,7 @@ script:
 # Push all source to scratch org and run tests
 - sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a ciorg
 - sfdx force:source:push -u ciorg
-- sfdx force:apex:test:run -u ciorg -c -r human
+- sfdx force:apex:test:run -u ciorg -c -r human -w 30
 - sfdx force:org:delete -u ciorg -p
 # Push packages to scratch org
 - sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a pkgInstallOrg
