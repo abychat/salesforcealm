@@ -11,6 +11,7 @@ env:
 before_install:
 # delete the following line before encrypting your server.key
 - openssl aes-256-cbc -K $encrypted_334346ef1ebe_key -iv $encrypted_334346ef1ebe_iv -in assets/server.key.enc -out assets/server.key -d
+
 - export SFDX_AUTOUPDATE_DISABLE=true
 - export SFDX_USE_GENERIC_UNIX_KEYCHAIN=true
 - export SFDX_DOMAIN_RETRY=300
@@ -18,9 +19,8 @@ before_install:
 - "./sfdx/install"
 - export PATH=./sfdx/$(pwd):$PATH
 - sfdx update
-# Authroize Dev Hub and Sandbox
+# Authroize Dev Hub
 - sfdx force:auth:jwt:grant --clientid $CONSUMERKEY --jwtkeyfile assets/server.key --username $USERNAME --setdefaultdevhubusername -a HubOrg
-- sfdx force:auth:jwt:grant -i $SBOXCONSUMERKEY -f assets/server.key -r https://test.salesforce.com -u $SBOXUSERNAME
 script:
 # Push all source to scratch org and run tests
 - sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a ciorg
