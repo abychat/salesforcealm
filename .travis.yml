@@ -38,3 +38,4 @@ script:
 - sfdx force:package:install -w 30 -u $SBOXUSERNAME -i $logicId
 - sfdx force:package:install -w 30 -u $SBOXUSERNAME -i $uiId
 - sfdx force:package:install -w 30 -u $SBOXUSERNAME -i $securityId
+- sfdx force:org:delete -u pkgInstallOrg -p
