@@ -33,9 +33,4 @@ script:
 - sfdx force:package:install -w 30 -u pkgInstallOrg -i $logicId
 - sfdx force:package:install -w 30 -u pkgInstallOrg -i $uiId
 - sfdx force:package:install -w 30 -u pkgInstallOrg -i $securityId
-# Push packages to Sandbox
-- sfdx force:package:install -w 30 -u $SBOXUSERNAME -i $coreId
-- sfdx force:package:install -w 30 -u $SBOXUSERNAME -i $logicId
-- sfdx force:package:install -w 30 -u $SBOXUSERNAME -i $uiId
-- sfdx force:package:install -w 30 -u $SBOXUSERNAME -i $securityId
 - sfdx force:org:delete -u pkgInstallOrg -p
