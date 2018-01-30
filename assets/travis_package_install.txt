@@ -1,0 +1,7 @@
+# Push packages to scratch org
+- sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a pkgInstallOrg
+- sfdx force:package:install -w 30 -u pkgInstallOrg -i $coreId
+- sfdx force:package:install -w 30 -u pkgInstallOrg -i $logicId
+- sfdx force:package:install -w 30 -u pkgInstallOrg -i $uiId
+- sfdx force:package:install -w 30 -u pkgInstallOrg -i $securityId
+- sfdx force:org:delete -u pkgInstallOrg -p
