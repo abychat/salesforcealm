@@ -28,7 +28,7 @@ HEROKU_PROD_APP_NAME="prod$TICKS"
 HEROKU_PIPELINE_NAME="pipeline$TICKS"
 
 # Usernames or aliases of the orgs you're using
-DEV_HUB_USERNAME="Hub Org"
+DEV_HUB_USERNAME="HubOrg"
 DEV_USERNAME="ac_dev_sandbox"
 STAGING_USERNAME="ac_stg_sandbox"
 PROD_USERNAME="ac_prod"
