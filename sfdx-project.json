@@ -1,73 +1,29 @@
 {
   "packageDirectories": [
     {
+      "path": "force-app",
+      "default":true
+    },
+    {
       "path": "ui",
-      "id": "<Replace with Package2 ID>",
-      "versionName": "v 1.0",
-      "versionDescription": "ver 1.0",
-      "versionNumber": "1.0.0.NEXT",
-      "ancestorId": "",
-      "dependencies": [
-        {
-        "packageId": "<Replace with Core Package ID>",
-        "versionNumber": "1.0.0.LATEST"
-        },
-        {
-        "packageId": "<Replace with Logic Package ID>",
-        "versionNumber": "1.0.0.LATEST"
-        }
-        ]
+      "default":false
     },
     {
       "path": "logic",
-      "id": "<Replace with Package2 ID>",
-      "versionName": "v 1.0",
-      "versionDescription": "ver 1.0",
-      "versionNumber": "1.0.0.NEXT",
-      "ancestorId": "",
-      "dependencies": [
-        {
-        "packageId": "<Replace with Core Package ID>",
-        "versionNumber": "1.0.0.LATEST"
-        }
-        ]
+      "default" : false
     },
     {
       "path": "core",
-      "id": "<Replace with Package2 ID>",
-      "versionName": "v 1.0",
-      "versionDescription": "ver 1.0",
-      "versionNumber": "1.0.0.NEXT",
-      "ancestorId": ""
+      "default" : false
     },
     {
       "path": "security",
-      "id": "<Replace with Package2 ID>",
-      "versionName": "v 1.0",
-      "versionDescription": "ver 1.0",
-      "versionNumber": "1.0.0.NEXT",
-      "ancestorId": "",
-      "dependencies": [
-        {
-        "packageId": "<Core Package ID>",
-        "versionNumber": "1.0.0.LATEST"
-        },
-        {
-        "packageId": "<Logic Package ID>",
-        "versionNumber": "1.0.0.LATEST"
-        },
-        {
-          "packageId": "<UI Package ID>",
-          "versionNumber": "1.0.0.LATEST"
-          }
-        ]
-    },
-    {
-      "path": "force-app",
-      "default":true
+      "default" : false
     }
   ],
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "41.0"
+  "sourceApiVersion": "45.0"
 }
+
+

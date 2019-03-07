@@ -5,3 +5,8 @@
 package.xml
 cbdev
 Salesforce_Branding_Resources
+**/jsconfig.json
+
+**/.eslintrc.json
+
+AppSwitcher.appMenu

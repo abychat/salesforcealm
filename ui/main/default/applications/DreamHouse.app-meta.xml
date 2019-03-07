@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Property_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Property__c</pageOrSobjectType>
+    </actionOverrides>
     <brand>
-        <headerColor>#84BF41</headerColor>
+        <headerColor>#86BD4A</headerColor>
         <logo>dreamhouselogosquare</logo>
-        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
     </brand>
-    <description>DreamHouse helps you connect with your Customers in a whole new way.</description>
     <formFactors>Large</formFactors>
-    <label>DreamHouse</label>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Dreamhouse</label>
     <navType>Standard</navType>
-    <tab>standard-home</tab>
-    <tab>Property__c</tab>
-    <tab>Broker__c</tab>
-    <tab>standard-Contact</tab>
-    <tab>Property_Explorer1</tab>
-    <tab>standard-report</tab>
-    <tab>standard-Dashboard</tab>
-    <tab>standard-Event</tab>
-    <tab>Sample_Data_Import</tab>
-    <tab>standard-File</tab>
+    <tabs>standard-home</tabs>
+    <tabs>Property_Explorer</tabs>
+    <tabs>Property_Finder</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>Property__c</tabs>
+    <tabs>Broker__c</tabs>
+    <tabs>standard-File</tabs>
+    <tabs>Settings</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>
