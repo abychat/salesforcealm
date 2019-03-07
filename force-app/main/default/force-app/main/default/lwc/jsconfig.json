@@ -2,11 +2,7 @@
     "compilerOptions": {
         "experimentalDecorators": true,
         "baseUrl": ".",
-        "paths": {
-            "c/property-map": [
-                "../../../../../../../ui/main/default/lwc/propertyMap/propertyMap.js"
-            ]
-        }
+        "paths": {}
     },
     "include": [
         "**/*",
