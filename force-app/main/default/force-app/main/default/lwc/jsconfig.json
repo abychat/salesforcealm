@@ -4,7 +4,7 @@
         "baseUrl": ".",
         "paths": {
             "c/property-map": [
-                "propertyMap/propertyMap.js"
+                "../../../../../../../ui/main/default/lwc/propertyMap/propertyMap.js"
             ]
         }
     },
