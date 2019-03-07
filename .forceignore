@@ -10,3 +10,5 @@ Salesforce_Branding_Resources
 **/.eslintrc.json
 
 AppSwitcher.appMenu
+
+OrgPreference
