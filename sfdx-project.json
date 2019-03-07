@@ -1,68 +1,6 @@
 {
   "packageDirectories": [
     {
-      "path": "ui",
-      "id": "0Hof4000000PAt1CAG",
-      "versionName": "v 1.0",
-      "versionDescription": "ver 1.0",
-      "versionNumber": "1.0.0.NEXT",
-      "ancestorId": "",
-      "dependencies": [
-        {
-        "packageId": "0Hof4000000PAsrCAG",
-        "versionNumber": "1.0.0.LATEST"
-        },
-        {
-        "packageId": "0Hof4000000PAswCAG",
-        "versionNumber": "1.0.0.LATEST"
-        }
-        ]
-    },
-    {
-      "path": "logic",
-      "id": "0Hof4000000PAswCAG",
-      "versionName": "v 1.0",
-      "versionDescription": "ver 1.0",
-      "versionNumber": "1.0.0.NEXT",
-      "ancestorId": "",
-      "dependencies": [
-        {
-        "packageId": "0Hof4000000PAsrCAG",
-        "versionNumber": "1.0.0.LATEST"
-        }
-        ]
-    },
-    {
-      "path": "core",
-      "id": "0Hof4000000PAsrCAG",
-      "versionName": "v 1.0",
-      "versionDescription": "ver 1.0",
-      "versionNumber": "1.0.0.NEXT",
-      "ancestorId": ""
-    },
-    {
-      "path": "security",
-      "id": "0Hof4000000PAt6CAG",
-      "versionName": "v 1.0",
-      "versionDescription": "ver 1.0",
-      "versionNumber": "1.0.0.NEXT",
-      "ancestorId": "",
-      "dependencies": [
-        {
-        "packageId": "0Hof4000000PAsrCAG",
-        "versionNumber": "1.0.0.LATEST"
-        },
-        {
-        "packageId": "0Hof4000000PAswCAG",
-        "versionNumber": "1.0.0.LATEST"
-        },
-        {
-          "packageId": "0Hof4000000PAt1CAG",
-          "versionNumber": "1.0.0.LATEST"
-          }
-        ]
-    },
-    {
       "path": "force-app",
       "default":true
     }

@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/property-map": [
+                "propertyMap/propertyMap.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ]
+}
