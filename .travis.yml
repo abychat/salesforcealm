@@ -1,27 +1,26 @@
 sudo: true
-dist: trusty
+os: trusty
 cache: false
 env:
-  global:
-    - URL=https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
-
+- URL=https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
 before_install:
-# delete the following line before encrypting your server.key
-- openssl aes-256-cbc -K $encrypted_334346ef1ebe_key -iv $encrypted_334346ef1ebe_iv -in assets/server.key.enc -out assets/server.key -d
-
-- export SFDX_AUTOUPDATE_DISABLE=true
+- openssl aes-256-cbc -K $encrypted_a16ae3ec4b79_key -iv $encrypted_a16ae3ec4b79_iv
+  -in assets/server.key.enc -out assets/server.key -d
+- export SFDX_AUTOUPDATE_DISABLE=false
 - export SFDX_USE_GENERIC_UNIX_KEYCHAIN=true
 - export SFDX_DOMAIN_RETRY=300
-- wget -qO- $URL | tar xJf -
+- export SFDX_DISABLE_APP_HUB=true
+- export SFDX_LOG_LEVEL=DEBUG
+- mkdir sfdx
+- wget -qO- $URL | tar xJ -C sfdx --strip-components 1
 - "./sfdx/install"
 - export PATH=./sfdx/$(pwd):$PATH
-- sfdx update
-# Authroize Dev Hub
+- sfdx --version
+- sfdx plugins --core
 - sfdx force:auth:jwt:grant --clientid $CONSUMERKEY --jwtkeyfile assets/server.key --username $USERNAME --setdefaultdevhubusername -a HubOrg
 script:
-# Push all source to scratch org and run tests
-- sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a ciorg
+- sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a ciorg --wait 2
+- sfdx force:org:display -u ciorg
 - sfdx force:source:push -u ciorg
-- sfdx force:apex:test:run -u ciorg -c -r human -w 30
+- sfdx force:apex:test:run -u ciorg -r human -w 10
 - sfdx force:org:delete -u ciorg -p
-
