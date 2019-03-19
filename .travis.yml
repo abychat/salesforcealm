@@ -25,8 +25,8 @@ before_install:
 script:
 - sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a pkgInstallOrg -w 10
 - sfdx force:org:display -u pkgInstallOrg
-- sfdx force:package:install -w 30 -u pkgInstallOrg -i $coreId
-- sfdx force:package:install -w 30 -u pkgInstallOrg -i $logicId
-- sfdx force:package:install -w 30 -u pkgInstallOrg -i $uiId
-- sfdx force:package:install -w 30 -u pkgInstallOrg -i $securityId
+- sfdx force:package:install -k packagepwd -p $coreId -s AllUsers -w 60
+- sfdx force:package:install -k packagepwd -p $logicId -s AllUsers -w 60
+- sfdx force:package:install -k packagepwd -p $uiId -s AllUsers -w 60
+- sfdx force:package:install -k packagepwd -p $securityId -s AllUsers -w 60
 - sfdx force:org:delete -u pkgInstallOrg -p
