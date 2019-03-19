@@ -12,9 +12,6 @@
             "c/property-filter": [
                 "propertyFilter/propertyFilter.js"
             ],
-            "c/property-map": [
-                "propertyMap/propertyMap.js"
-            ],
             "c/property-summary": [
                 "propertySummary/propertySummary.js"
             ],

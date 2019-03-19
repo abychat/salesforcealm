@@ -12,9 +12,6 @@
             "c/property-filter": [
                 "../../../../ui/main/default/lwc/propertyFilter/propertyFilter.js"
             ],
-            "c/property-map": [
-                "../../../../ui/main/default/lwc/propertyMap/propertyMap.js"
-            ],
             "c/property-summary": [
                 "../../../../ui/main/default/lwc/propertySummary/propertySummary.js"
             ],
