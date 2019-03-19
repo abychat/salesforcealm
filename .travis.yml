@@ -3,6 +3,10 @@ os: trusty
 cache: false
 env:
 - URL=https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
+- coreId=core@0.1.0-LATEST
+- logicId=logic@0.1.0-LATEST
+- uiId=ui@0.1.0-LATEST
+- securityId=security@0.1.0-LATEST
 before_install:
 - openssl aes-256-cbc -K $encrypted_a16ae3ec4b79_key -iv $encrypted_a16ae3ec4b79_iv
   -in assets/server.key.enc -out assets/server.key -d
@@ -19,9 +23,10 @@ before_install:
 - sfdx plugins --core
 - sfdx force:auth:jwt:grant --clientid $CONSUMERKEY --jwtkeyfile assets/server.key --username $USERNAME --setdefaultdevhubusername -a HubOrg
 script:
-- sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a ciorg -w 10
-- sfdx force:org:display -u ciorg
-- sleep 300
-- sfdx force:source:push -u ciorg
-- sfdx force:apex:test:run -u ciorg -r human -w 10
-- sfdx force:org:delete -u ciorg -p
+- sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a pkgInstallOrg -w 10
+- sfdx force:org:display -u pkgInstallOrg
+- sfdx force:package:install -w 30 -u pkgInstallOrg -i $coreId
+- sfdx force:package:install -w 30 -u pkgInstallOrg -i $logicId
+- sfdx force:package:install -w 30 -u pkgInstallOrg -i $uiId
+- sfdx force:package:install -w 30 -u pkgInstallOrg -i $securityId
+- sfdx force:org:delete -u pkgInstallOrg -p
