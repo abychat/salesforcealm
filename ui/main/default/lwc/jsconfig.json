@@ -3,6 +3,24 @@
         "experimentalDecorators": true,
         "baseUrl": ".",
         "paths": {
+            "c/aura-pubsub": [
+                "../../../../core/main/default/lwc/auraPubsub/auraPubsub.js"
+            ],
+            "c/broker-card": [
+                "../../../../core/main/default/lwc/brokerCard/brokerCard.js"
+            ],
+            "c/days-on-market": [
+                "../../../../core/main/default/lwc/daysOnMarket/daysOnMarket.js"
+            ],
+            "c/inline-message": [
+                "../../../../core/main/default/lwc/inlineMessage/inlineMessage.js"
+            ],
+            "c/lds-utils": [
+                "../../../../core/main/default/lwc/ldsUtils/ldsUtils.js"
+            ],
+            "c/pubsub": [
+                "../../../../core/main/default/lwc/pubsub/pubsub.js"
+            ],
             "c/paginator": [
                 "paginator/paginator.js"
             ],
@@ -23,24 +41,6 @@
             ],
             "c/sample-data-importer": [
                 "sampleDataImporter/sampleDataImporter.js"
-            ],
-            "c/aura-pubsub": [
-                "../../../../core/main/default/lwc/auraPubsub/auraPubsub.js"
-            ],
-            "c/broker-card": [
-                "../../../../core/main/default/lwc/brokerCard/brokerCard.js"
-            ],
-            "c/days-on-market": [
-                "../../../../core/main/default/lwc/daysOnMarket/daysOnMarket.js"
-            ],
-            "c/inline-message": [
-                "../../../../core/main/default/lwc/inlineMessage/inlineMessage.js"
-            ],
-            "c/lds-utils": [
-                "../../../../core/main/default/lwc/ldsUtils/ldsUtils.js"
-            ],
-            "c/pubsub": [
-                "../../../../core/main/default/lwc/pubsub/pubsub.js"
             ]
         }
     },

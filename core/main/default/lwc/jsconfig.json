@@ -3,6 +3,24 @@
         "experimentalDecorators": true,
         "baseUrl": ".",
         "paths": {
+            "c/aura-pubsub": [
+                "auraPubsub/auraPubsub.js"
+            ],
+            "c/broker-card": [
+                "brokerCard/brokerCard.js"
+            ],
+            "c/days-on-market": [
+                "daysOnMarket/daysOnMarket.js"
+            ],
+            "c/inline-message": [
+                "inlineMessage/inlineMessage.js"
+            ],
+            "c/lds-utils": [
+                "ldsUtils/ldsUtils.js"
+            ],
+            "c/pubsub": [
+                "pubsub/pubsub.js"
+            ],
             "c/paginator": [
                 "../../../../ui/main/default/lwc/paginator/paginator.js"
             ],
@@ -23,24 +41,6 @@
             ],
             "c/sample-data-importer": [
                 "../../../../ui/main/default/lwc/sampleDataImporter/sampleDataImporter.js"
-            ],
-            "c/aura-pubsub": [
-                "auraPubsub/auraPubsub.js"
-            ],
-            "c/broker-card": [
-                "brokerCard/brokerCard.js"
-            ],
-            "c/days-on-market": [
-                "daysOnMarket/daysOnMarket.js"
-            ],
-            "c/inline-message": [
-                "inlineMessage/inlineMessage.js"
-            ],
-            "c/lds-utils": [
-                "ldsUtils/ldsUtils.js"
-            ],
-            "c/pubsub": [
-                "pubsub/pubsub.js"
             ]
         }
     },
