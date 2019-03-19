@@ -1,6 +1,6 @@
 {
     "orgName": "dev",
-    "edition": "Developer",
+    "edition": "Enterprise",
     "orgPreferences": {
       "enabled": [
         "S1DesktopEnabled","ChatterEnabled"
