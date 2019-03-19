@@ -4,7 +4,7 @@
     "settings": {
       "orgPreferenceSettings": {
           "s1DesktopEnabled": true,
-          "ChatterEnabled": true
+          "chatterEnabled": true
      }
     }
   }
