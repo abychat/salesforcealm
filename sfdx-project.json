@@ -61,11 +61,5 @@
     ],
     "namespace": "",
     "sfdcLoginUrl": "https://login.salesforce.com",
-    "sourceApiVersion": "45.0",
-    "packageAliases": {
-        "core@0.1.0-1":"04t1U000006uWCpQAM",
-        "logic@0.1.0-2":"04t1U000006ud9IQAQ",
-        "ui@0.1.0-1":"04t1U000006uoEAQAY",
-        "security@0.1.0-1":"04t1U000006xzgpQAA"
-    }
+    "sourceApiVersion": "45.0"
 }

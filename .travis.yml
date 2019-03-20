@@ -2,12 +2,7 @@ sudo: true
 os: trusty
 cache: false
 env:
-  global:
-    - URL=https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
-    - coreId=core@0.1.0-1
-    - logicId=logic@0.1.0-2
-    - uiId=ui@0.1.0-1
-    - securityId=security@0.1.0-1
+- URL=https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
 before_install:
 - openssl aes-256-cbc -K $encrypted_a16ae3ec4b79_key -iv $encrypted_a16ae3ec4b79_iv
   -in assets/server.key.enc -out assets/server.key -d
@@ -23,19 +18,10 @@ before_install:
 - sfdx --version
 - sfdx plugins --core
 - sfdx force:auth:jwt:grant --clientid $CONSUMERKEY --jwtkeyfile assets/server.key --username $USERNAME --setdefaultdevhubusername -a HubOrg
-- sfdx force:auth:jwt:grant -i $SBOXCONSUMERKEY -f assets/server.key -r https://test.salesforce.com -u $SBOXUSERNAME
 script:
-- sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a pkgInstallOrg -w 10
-- sfdx force:org:display -u pkgInstallOrg
-- sfdx force:package:install -k packagepwd -p $coreId -s AllUsers -w 60
-- sfdx force:package:install -k packagepwd -p $logicId -s AllUsers -w 60
-- sfdx force:package:install -k packagepwd -p $uiId -s AllUsers -w 60
-- echo 'y' | sfdx force:package:install -k packagepwd -p $securityId -s AllUsers -w 60
-- sfdx force:apex:test:run -u pkgInstallOrg -r human -w 10
-- sfdx force:org:delete -u pkgInstallOrg -p
-
-# Push packages to Sandbox
-- sfdx force:package:install -k packagepwd -u $SBOXUSERNAME -p $coreId -s AllUsers -w 60
-- sfdx force:package:install -k packagepwd -u $SBOXUSERNAME -p $logicId -s AllUsers -w 60
-- sfdx force:package:install -k packagepwd -u $SBOXUSERNAME -p $uiId -s AllUsers -w 60
-- echo 'y' | sfdx force:package:install -k packagepwd -u $SBOXUSERNAME -p $securityId -s AllUsers -w 60
+- sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a ciorg -w 10
+- sfdx force:org:display -u ciorg
+- sleep 300
+- sfdx force:source:push -u ciorg
+- sfdx force:apex:test:run -u ciorg -r human -w 10
+- sfdx force:org:delete -u ciorg -p
