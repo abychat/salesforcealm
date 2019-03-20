@@ -30,5 +30,5 @@ script:
 - sfdx force:package:install -k packagepwd -p $logicId -s AllUsers -w 60
 - sfdx force:package:install -k packagepwd -p $uiId -s AllUsers -w 60
 - echo 'y' | sfdx force:package:install -k packagepwd -p $securityId -s AllUsers -w 60
-- sfdx force:apex:test:run -u ciorg -r human -w 10
+- sfdx force:apex:test:run -u pkgInstallOrg -r human -w 10
 - sfdx force:org:delete -u pkgInstallOrg -p
