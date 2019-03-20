@@ -25,6 +25,18 @@ before_install:
 - sfdx force:auth:jwt:grant --clientid $CONSUMERKEY --jwtkeyfile assets/server.key --username $USERNAME --setdefaultdevhubusername -a HubOrg
 - sfdx force:auth:jwt:grant -i $SBOXCONSUMERKEY -f assets/server.key -r https://test.salesforce.com -u $SBOXUSERNAME
 script:
+
+#Push all code to scratch org 
+
+- sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a ciorg -w 10
+- sfdx force:org:display -u ciorg
+- sleep 300
+- sfdx force:source:push -u ciorg
+- sfdx force:apex:test:run -u ciorg -r human -w 10
+- sfdx force:org:delete -u ciorg -p
+
+#Push packages to scratch org
+
 - sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a pkgInstallOrg -w 10
 - sfdx force:org:display -u pkgInstallOrg
 - sfdx force:package:install -k packagepwd -p $coreId -s AllUsers -w 60
