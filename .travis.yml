@@ -32,3 +32,9 @@ script:
 - echo 'y' | sfdx force:package:install -k packagepwd -p $securityId -s AllUsers -w 60
 - sfdx force:apex:test:run -u pkgInstallOrg -r human -w 10
 - sfdx force:org:delete -u pkgInstallOrg -p
+
+# Push packages to Sandbox
+- sfdx force:package:install -k packagepwd -u $SBOXUSERNAME -p $coreId -s AllUsers -w 60
+- sfdx force:package:install -k packagepwd -u $SBOXUSERNAME -p $logicId -s AllUsers -w 60
+- sfdx force:package:install -k packagepwd -u $SBOXUSERNAME -p $uiId -s AllUsers -w 60
+- echo 'y' | sfdx force:package:install -k packagepwd -u $SBOXUSERNAME -p $securityId -s AllUsers -w 60
