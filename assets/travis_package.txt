@@ -1,11 +1,11 @@
 sudo: true
-dist: trusty
+os: trusty
 cache: false
 env:
   global:
     - URL=https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
-    - coreId=04tf4000001I1CsAAK
-    - logicId=04tf4000001I1CxAAK
-    - uiId=04tf4000001I1D2AAK
-    - securityId=04tf4000001I1D7AAK
+    - coreId=core@0.1.0-1
+    - logicId=logic@0.1.0-2
+    - uiId=ui@0.1.0-1
+    - securityId=security@0.1.0-1
 before_install:
