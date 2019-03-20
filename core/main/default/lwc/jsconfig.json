@@ -1,0 +1,51 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/aura-pubsub": [
+                "auraPubsub/auraPubsub.js"
+            ],
+            "c/broker-card": [
+                "brokerCard/brokerCard.js"
+            ],
+            "c/days-on-market": [
+                "daysOnMarket/daysOnMarket.js"
+            ],
+            "c/inline-message": [
+                "inlineMessage/inlineMessage.js"
+            ],
+            "c/lds-utils": [
+                "ldsUtils/ldsUtils.js"
+            ],
+            "c/pubsub": [
+                "pubsub/pubsub.js"
+            ],
+            "c/paginator": [
+                "../../../../ui/main/default/lwc/paginator/paginator.js"
+            ],
+            "c/property-carousel": [
+                "../../../../ui/main/default/lwc/propertyCarousel/propertyCarousel.js"
+            ],
+            "c/property-filter": [
+                "../../../../ui/main/default/lwc/propertyFilter/propertyFilter.js"
+            ],
+            "c/property-summary": [
+                "../../../../ui/main/default/lwc/propertySummary/propertySummary.js"
+            ],
+            "c/property-tile": [
+                "../../../../ui/main/default/lwc/propertyTile/propertyTile.js"
+            ],
+            "c/property-tile-list": [
+                "../../../../ui/main/default/lwc/propertyTileList/propertyTileList.js"
+            ],
+            "c/sample-data-importer": [
+                "../../../../ui/main/default/lwc/sampleDataImporter/sampleDataImporter.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ]
+}

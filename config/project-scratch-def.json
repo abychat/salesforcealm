@@ -1,13 +1,11 @@
 {
     "orgName": "dev",
     "edition": "Developer",
-    "orgPreferences": {
-      "enabled": [
-        "S1DesktopEnabled","ChatterEnabled"
-      ],
-      "disabled": [
-        
-      ]
+    "settings": {
+      "orgPreferenceSettings": {
+          "s1DesktopEnabled": true,
+          "chatterEnabled": true
+     }
     }
   }
   

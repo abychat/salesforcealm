@@ -1,73 +1,71 @@
 {
-  "packageDirectories": [
-    {
-      "path": "ui",
-      "id": "0Hof4000000PAt1CAG",
-      "versionName": "v 1.0",
-      "versionDescription": "ver 1.0",
-      "versionNumber": "1.0.0.NEXT",
-      "ancestorId": "",
-      "dependencies": [
+    "packageDirectories": [
         {
-        "packageId": "0Hof4000000PAsrCAG",
-        "versionNumber": "1.0.0.LATEST"
+            "path": "force-app",
+            "default": true
         },
         {
-        "packageId": "0Hof4000000PAswCAG",
-        "versionNumber": "1.0.0.LATEST"
+            "path": "core",
+            "default": false,
+            "package": "core",
+            "versionNumber": "0.1.0.NEXT"
+        },
+        {
+            "path": "logic",
+            "default": false,
+            "versionNumber": "0.1.0.NEXT",
+            "package": "logic",
+            "dependencies": [
+                {
+                    "package": "core",
+                    "versionNumber": "0.1.0.LATEST"
+                }
+            ]
+        },
+        {
+            "path": "ui",
+            "default": false,
+            "versionNumber": "0.1.0.NEXT",
+            "package": "ui",
+            "dependencies": [
+                {
+                    "package": "core",
+                    "versionNumber": "0.1.0.LATEST"
+                },
+                {
+                    "package": "logic",
+                    "versionNumber": "0.1.0.LATEST"
+                }
+            ]
+        },
+        {
+            "path": "security",
+            "default": false,
+            "versionNumber": "0.1.0.NEXT",
+            "package": "security",
+            "dependencies": [
+                {
+                    "package": "core",
+                    "versionNumber": "0.1.0.LATEST"
+                },
+                {
+                    "package": "logic",
+                    "versionNumber": "0.1.0.LATEST"
+                },
+                {
+                    "package": "ui",
+                    "versionNumber": "0.1.0.LATEST"
+                }
+            ]
         }
-        ]
-    },
-    {
-      "path": "logic",
-      "id": "0Hof4000000PAswCAG",
-      "versionName": "v 1.0",
-      "versionDescription": "ver 1.0",
-      "versionNumber": "1.0.0.NEXT",
-      "ancestorId": "",
-      "dependencies": [
-        {
-        "packageId": "0Hof4000000PAsrCAG",
-        "versionNumber": "1.0.0.LATEST"
-        }
-        ]
-    },
-    {
-      "path": "core",
-      "id": "0Hof4000000PAsrCAG",
-      "versionName": "v 1.0",
-      "versionDescription": "ver 1.0",
-      "versionNumber": "1.0.0.NEXT",
-      "ancestorId": ""
-    },
-    {
-      "path": "security",
-      "id": "0Hof4000000PAt6CAG",
-      "versionName": "v 1.0",
-      "versionDescription": "ver 1.0",
-      "versionNumber": "1.0.0.NEXT",
-      "ancestorId": "",
-      "dependencies": [
-        {
-        "packageId": "0Hof4000000PAsrCAG",
-        "versionNumber": "1.0.0.LATEST"
-        },
-        {
-        "packageId": "0Hof4000000PAswCAG",
-        "versionNumber": "1.0.0.LATEST"
-        },
-        {
-          "packageId": "0Hof4000000PAt1CAG",
-          "versionNumber": "1.0.0.LATEST"
-          }
-        ]
-    },
-    {
-      "path": "force-app",
-      "default":true
+    ],
+    "namespace": "",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "45.0",
+    "packageAliases": {
+        "core@0.1.0-1":"04t1U000006uWCpQAM",
+        "logic@0.1.0-2":"04t1U000006ud9IQAQ",
+        "ui@0.1.0-1":"04t1U000006uoEAQAY",
+        "security@0.1.0-1":"04t1U000006xzgpQAA"
     }
-  ],
-  "namespace": "",
-  "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "41.0"
 }
