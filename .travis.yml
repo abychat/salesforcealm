@@ -23,6 +23,7 @@ before_install:
 - sfdx --version
 - sfdx plugins --core
 - sfdx force:auth:jwt:grant --clientid $CONSUMERKEY --jwtkeyfile assets/server.key --username $USERNAME --setdefaultdevhubusername -a HubOrg
+- sfdx force:auth:jwt:grant -i $SBOXCONSUMERKEY -f assets/server.key -r https://test.salesforce.com -u $SBOXUSERNAME
 script:
 - sfdx force:org:create -v HubOrg -s -f config/project-scratch-def.json -a pkgInstallOrg -w 10
 - sfdx force:org:display -u pkgInstallOrg
