@@ -1,0 +1,79 @@
+{
+    "namespace": "",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "45.0",
+    "packageDirectories": [
+        {
+            "path": "force-app",
+            "default": true
+        },
+        {
+            "path": "core",
+            "default": false,
+            "package": "core",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT"
+        },
+        {
+            "path": "logic",
+            "default": false,
+            "package": "logic",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "dependencies": [
+                {
+                    "package": "core",
+                    "versionNumber": "0.1.0.LATEST"
+                }
+            ]
+        },
+        {
+            "path": "ui",
+            "default": false,
+            "package": "ui",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "dependencies": [
+                {
+                    "package": "core",
+                    "versionNumber": "0.1.0.LATEST"
+                },
+                {
+                    "package": "logic",
+                    "versionNumber": "0.1.0.LATEST"
+                }
+            ]
+        },
+        {
+            "path": "security",
+            "default": false,
+            "package": "security",
+            "versionName": "ver 0.1",
+            "versionNumber": "0.1.0.NEXT",
+            "dependencies": [
+                {
+                    "package": "core",
+                    "versionNumber": "0.1.0.LATEST"
+                },
+                {
+                    "package": "logic",
+                    "versionNumber": "0.1.0.LATEST"
+                },
+                {
+                    "package": "ui",
+                    "versionNumber": "0.1.0.LATEST"
+                }
+            ]
+        }
+    ],
+    "packageAliases": {
+        "core": "0Ho1N000000KyouSAC",
+        "core@0.1.0-1": "04t1N000000kiecQAA",
+        "logic": "0Ho1N000000KyozSAC",
+        "ui": "0Ho1N000000Kyp4SAC",
+        "security": "0Ho1N000000Kyp9SAC",
+        "logic@0.1.0-1": "04t1N000000kiehQAA",
+        "ui@0.1.0-1": "04t1N000000kiemQAA",
+        "security@0.1.0-1": "04t1N000000kiemSAA"
+    }
+}
