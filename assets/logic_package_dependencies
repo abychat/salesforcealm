@@ -1,0 +1,6 @@
+"dependencies": [
+	{
+		"package": "core",
+		"versionNumber": "0.1.0.LATEST"
+	}
+]
