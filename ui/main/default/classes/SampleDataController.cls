@@ -18,6 +18,7 @@ public with sharing class SampleDataController {
 
         } catch (Exception e) {
             System.debug(e);
+            System.debug('Hello how are you?');
         }
     }
 
